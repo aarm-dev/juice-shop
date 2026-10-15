@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: juice-shop-pentest
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: "10000"
